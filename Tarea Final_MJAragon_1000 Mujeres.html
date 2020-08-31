@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- CODIGO de MariaJose Aragon:
+  El diseño fue hecho con la ayuda de la pagina
+  https://www.w3schools.com/howto/howto_css_blog_layout.asp 
+  las cosas que fueron añadidas son de este mismo sitio-->
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+  <title>Sitio Web María-José Aragón</title>   
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+ 
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 80px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+}
+
+/* Aumentar la fuente del encabezado the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: rgb(28, 228, 235);
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Estilo navegación bar Links Home Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: rgb(240, 25, 54);
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+/* Estilo iconos redes sociales Style all font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Grupo especificación color segun red social */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-instragram {
+  background: #f1535a;
+  color: white;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+ 
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Color de atrás de las columnas de texto  Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: lemonchiffon;
+  padding: 20px;
+}
+
+/* Cambiar color a las figuras donde dice image Fake image, just for this example */
+.fakeimg {
+  background-color: rgb(69, 243, 199);
+  width: 100%;
+  padding: 20px;
+}
+
+/* Bordes separadores */
+hr.dashed {
+  border-top: 4px dashed #bbb;
+}
+
+/* Imagen en los textos */
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35%;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Estilo del formulario texto Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 7px; /* Some padding */ 
+  border: 1px solid rgb(74, 202, 219); /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 11px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: lightsalmon;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: lightseagreen;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: paleturquoise;
+  padding: 20px;
+}
+
+/* El final de la pagina web Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: rgb(221, 221, 221);
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+    
+    <!-- *Barra de arriba Home* -->
+    <div class="navbar">
+        <a href="#" class="active">Home</a>
+        <a href="#">Novelas y cuentos</a>
+        <a href="#">Cursos y Talleres</a>
+        <a href="#">Colaboraciones</a>
+        <a href="#">Novedades</a>
+        <a href="#">Contacto</a>
+        <a href="#" class="right"></a>
+      </div>
+
+    <!-- *Imagen en cabezado* -->
+     <img src="http://4.bp.blogspot.com/-8S8wVnT74sg/XLOsGCOeAKI/AAAAAAAANxA/rbpsnJJ4nD4BUcyMK1WOE08a76TR8TtwACK4BGAYYCw/s1600/Copia%2BBlog.png" style="width:100%">
+      </div>
+      
+
+    <!-- Agregar botones redes sociales   Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <h2>Sígueme en</h2>
+    <!-- Add font awesome icons -->
+    <a href="https://www.facebook.com/escritoramjaragon" class="fa fa-facebook"></a>
+    <a href="https://www.instagram.com/joselandia_scl/" class="fa fa-instagram"></a>
+
+
+<!-- *About me* -->
+ <div class="row">
+  <div class="side">
+      <h2>Sobre mí</h2>
+    <img src="https://scontent.fscl10-1.fna.fbcdn.net/v/t1.0-9/64922160_422801855242041_7543378613903556608_n.jpg?_nc_cat=104&_nc_sid=09cbfe&_nc_ohc=G2d3eh7oXsMAX_IfEIN&_nc_ht=scontent.fscl10-1.fna&oh=79b63b601f1f72d86bf354a9eff631d9&oe=5F70C5AE" style="height:150px;">
+    <p>Escritora de libros digitales, e interactivos con múltiples finales: <i style="color: rgb(255, 0, 170);">El Plan</style></i> como <i style="color: blue;">El chico del casco</i><i style="color:red;"> rojo</i></style></p>
+
+    <hr class="dashed">  
+
+    <!-- *Suscripcion para Pathbooks* -->
+    <h3>Compra mis libros aquí</h3>
+    <p style="color:Blue;"><b>Mis Libros interactivos: </b></p>
+    <img src="" alt="">
+    <div class="fakeimg" style="height:80px;"><a href="https://play.google.com/store/apps/details?id=com.livingabook.app&hl=es_CL">
+        <h3>Pathbooks➙ Google Play</h3>
+    </a></div><br>
+    <div class="fakeimg" style="height:80px;"><a href="https://apps.apple.com/us/app/pathbooks-stories-audiobooks/id1233961624">
+        <h3>Pathbooks➙ Apple Store</h3>
+    </a></div><br>
+     
+    <p style="color:darkolivegreen;"><b>Mis Libros en Amazon: </b></p>
+    <div class="fakeimg" style="height:60px;">Amazon.es</div>
+  </div>
+
+  <div class="main">
+    <h1>¡Comienza la cuenta regresiva!</h1>
+       
+    <!-- Display the countdown timer in an element -->
+<p id="demo"></p>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Nov 23, 2020 15:37:25").getTime();
+
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Cerradas las inscripciones";
+  }
+}, 1000);
+</script>
+      
+    <p>Si quieres ser la primera o primero en saber esta gran noticia, <b>incríbete en el siguiente formulario</b>, y ¡¡podrás participar en fabulosos premios!!</p>
+    <div class="container">
+        <form action="action_page.php">
+      
+          <label for="fname">Nombre</label>
+          <input type="text" id="fname" name="Nombre">
+      
+          <label for="lname">Apellido</label>
+          <input type="text" id="lname" name="lastname">
+
+          <label for="email">Correo Electrónico</label>
+          <input type="text" id="email" name="email">
+
+           <input type="submit" value="Submit">
+      
+        </form>
+      </div>
+  
+    <hr class="dashed">
+
+    <div class="main">
+        <h2>¡Nos abrimos al mundo!</h2>
+        <h4><i>Noticias sobre los libros interactivos</i>, Jul 25, 2020</h4>
+        <img src="https://scontent.fscl10-1.fna.fbcdn.net/v/t1.0-9/81502538_560337158155176_8312837776101867520_n.jpg?_nc_cat=108&_nc_sid=a26aad&_nc_ohc=bk9LIBA-xpgAX-of9Hi&_nc_ht=scontent.fscl10-1.fna&oh=d9fb90eced232cf8751e317d240eef90&oe=5F71CA4D" class="center">  
+        <p>Tenemos la alegría de comunicar que tanto <i style="color: rgb(255, 0, 170);">El Plan</style></i> como <i style="color: blue;">El chico del casco</i><i style="color:red;"> rojo</i></style>
+         , ahora están <b>disponibles en seis idiomas diferentes.</b></p>
+        <p>Disfruta de esta nueva modalidad de lectura, porque a medida que vayas leyendo la historia se te irán presentando diferentes opciones, y solo las que elijas podrán llevarte a descubrir múltiples finales.</p>
+        <p>Idiomas disponibles: Español, English, Francais, Portoghese, Italiano, Deutsch.</p>
+        <button onclick="myFunction()">BookTrailer El Plan</button>     <button onclick="myFunction()">BookTrailer El chico del casco rojo</button>
+        <div id="myDIV"></div>
+      
+    <hr class="dashed">
+   
+    
+    <h2>¡El chico del casco rojo ya está en Goodreads!</h2>
+    <h4><i>Reseña en Goodreads</i>, Apr 15, 2020</h4>
+    <img src="https://scontent.fscl10-1.fna.fbcdn.net/v/t1.0-9/91641354_628727041316187_1585300638298800128_o.jpg?_nc_cat=100&_nc_sid=a26aad&_nc_ohc=JqEyZUMSMBUAX-nIjC2&_nc_ht=scontent.fscl10-1.fna&oh=adc6a99b56a4b935d973bfab0aeb779f&oe=5F70BAD7" class="center">
+    <p>Las noticias buenas se comparten, más aún si es saber que mi segundo libro interactivo titulado <i style="color: blue;">El chico del casco</i><i style="color:red;"> rojo</i></style> ha sido reseñado por una lectora de forma positiva. Estoy muy feliz por este gran pequeño paso.</p>
+    <p>Te invito a leer la reseña completa, y a animarte para que revises el BookTrailer de este libro interactivo en este sitio web.</p>
+    <a href="https://www.goodreads.com/book/show/53178788-el-chico-del-casco-rojo?from_search=true&from_srp=true&qid=lX6p7AVarC&rank=1">
+    <h5>El chico del casco rojo ➙ Goodreads</h5>
+</a>
+
+    
+</div>
+</div>
+
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+
+</body>
+</html>
